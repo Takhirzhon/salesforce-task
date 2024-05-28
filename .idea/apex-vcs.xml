@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ApexVcsIndex">
     <index-record>
-      <option name="path" value="/src/classes/OrderManagementController.cls" />
+      <option name="path" value="/src/lwc/OrderManagement/OrderManagement.js-meta.xml" />
       <option name="type" value="NEW" />
     </index-record>
     <index-record>
@@ -10,11 +10,11 @@
       <option name="type" value="NEW" />
     </index-record>
     <index-record>
-      <option name="path" value="/src/lwc/OrderManagement/OrderManagement.js-meta.xml" />
+      <option name="path" value="/src/lwc/OrderManagement/OrderManagement.js" />
       <option name="type" value="NEW" />
     </index-record>
     <index-record>
-      <option name="path" value="/src/lwc/OrderManagement/OrderManagement.js" />
+      <option name="path" value="/src/classes/OrderManagementController.cls" />
       <option name="type" value="NEW" />
     </index-record>
     <index-record>
