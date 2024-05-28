@@ -1,0 +1,42 @@
+<template>
+    <lightning-card title="Order Management" icon-name="custom:custom63">
+        <div class="slds-grid slds-wrap">
+            <div class="slds-col slds-size_1-of-1 slds-p-around_medium">
+                <lightning-layout multiple-rows>
+                    <lightning-layout-item size="6">
+                        <lightning-input label="Account Name" value={accountName} readonly></lightning-input>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="6">
+                        <lightning-input label="Account Number" value={accountNumber} readonly></lightning-input>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+
+            <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                <h3 class="slds-section-title--divider">Filter</h3>
+                <template for:each={filters} for:item="filter">
+                    <lightning-checkbox-group key={filter.key}
+                                              label={filter.label}
+                                              options={filter.options}
+                                              value={filter.value}
+                                              onchange={handleFilterChange}></lightning-checkbox-group>
+                </template>
+            </div>
+            <div class="slds-col slds-size_1-of-2 slds-p-around_medium">
+                <h3 class="slds-section-title--divider">Search</h3>
+                <lightning-input type="search" label="Search Products" onchange={handleSearchChange}></lightning-input>
+            </div>
+
+            <div class="slds-col slds-size_1-of-1 slds-p-around_medium">
+                <template for:each={products} for:item="product">
+                    <div key={product.Id} class="slds-box slds-box_x-small slds-text-align_center slds-m-around_small">
+                        <p>{product.Name}</p>
+                        <p>{product.Description}</p>
+                        <lightning-button label="Details" variant="brand-outline" onclick={handleDetails}></lightning-button>
+                        <lightning-button label="Add" variant="success" onclick={handleAddToCart}></lightning-button>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>
